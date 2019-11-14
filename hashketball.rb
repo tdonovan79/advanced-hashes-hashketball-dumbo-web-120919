@@ -305,7 +305,7 @@ def long_name_steals_a_ton?
       end
     end
   end
-  return most_points[:player_name]
+  #compare both values and return true or false
 end
 
 
