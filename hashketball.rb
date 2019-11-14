@@ -228,7 +228,7 @@ def most_points_scored
       if team_info == :players
         #iterate through players and update most_points if points is greater
         value.each do |player|
-          if player[:points] > biggest_shoe[:points]
+          if player[:points] > most_points[:points]
             most_points = player
           end
         end
@@ -288,8 +288,24 @@ def player_with_longest_name
   return long_name[:player_name]
 end
 
+#return true if player with longest name has most steals
 def long_name_steals_a_ton?
-  
+  most_steals = {:steals => 0}
+  #iterate through teams
+  game_hash.each do |teams, info|
+    #iterate through team info
+    info.each do |team_info, value|
+      if team_info == :players
+        #iterate through players and update most_points if points is greater
+        value.each do |player|
+          if player[:steals] > biggest_shoe[:points]
+            most_points = player
+          end
+        end
+      end
+    end
+  end
+  return most_points[:player_name]
 end
 
 
