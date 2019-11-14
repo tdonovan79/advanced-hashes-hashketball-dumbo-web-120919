@@ -298,8 +298,8 @@ def long_name_steals_a_ton?
       if team_info == :players
         #iterate through players and update most_points if points is greater
         value.each do |player|
-          if player[:steals] > biggest_shoe[:points]
-            most_points = player
+          if player[:steals] > most_steals[:steals]
+            most_steals = player
           end
         end
       end
