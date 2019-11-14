@@ -306,7 +306,7 @@ def long_name_steals_a_ton?
     end
   end
   #compare both values and return true or false
-  if most_steals[:name] == player_with_longest_name[:name]
+  if most_steals[:player_name] == player_with_longest_name[:player_name]
     return true
   else
     return false
